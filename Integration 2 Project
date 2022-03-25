@@ -1,0 +1,252 @@
+# Jacob Palmer
+# 2005 World Series Game 4, Chicago White Sox VS. Houston Astros
+# Website that helped me: https://www.baseball-reference.com/boxes/HOU/HOU200510260.shtml#all_1140652459
+# I have don't have a clue how to include parameter passing in this program
+import time
+
+
+def intro():
+    # This is the introduction to the simulation
+    print()
+    print("This game was on Wednesday, October 26, 2005 at 7:40 P.M.")
+    print()
+    time.sleep(1.5)
+    x = 13
+    x -= 1
+    y = 5
+    y -= 1
+    attendance = int(x ** y + x ** y + 61 * 24)
+    print("The total attendance of the game was",
+          f"{attendance:,}", "people")
+    # 12**4 + 12**4 + 61*24 = 42936, 42936 represents the
+    # number of people that went to the game
+    time.sleep(1.5)
+    print()
+    print("The home team is the Houston Astros")
+    print("The away team is the Chicago White Sox")
+    time.sleep(1.5)
+    print()
+    print("The starting line up for the Houston Astros")
+    time.sleep(1.5)
+    print()
+    print("Batting first and playing 2nd base", "Craig Biggio", sep=', ')
+    # You can do ", sep= ', '" for all the players names if you choose to,
+    # but I chose not to
+    print("Batting second and playing center field, Willy Taveras")
+    print("Batting third and playing left field, Lance Berkman")
+    print("Batting fourth and playing 3rd base, Morgan Ensberg")
+    print("Batting fifth and playing 1st base, Mike Lamb")
+    print("Batting sixth and playing right field, Jason Lane")
+    print("Batting seventh and catcher, Brad Ausmus")
+    print("Batting eighth and playing shortstop, Adam Everett")
+    print("Batting ninth and pitching, Brandon Backe")
+    time.sleep(4)
+    print()
+    print("The starting line up for the Chicago White Sox")
+    time.sleep(1.5)
+    print()
+    print("Batting first and playing left field, Scott Podsednik")
+    print("Batting second and playing 2nd base, Tadahito Iguchi")
+    print("Batting third and playing right field, Jermaine Dye")
+    print("Batting fourth and playing 1st base, Paul Konerko")
+    print("Batting fifth and catcher, A.J. Pierzynski")
+    print("Batting sixth and playing center field, Aaron Rowand")
+    print("Batting seventh and playing 3rd base, Joe Crede")
+    print("Batting eighth and playing shortstop, Juan Uribe")
+    print("Batting ninth and pitching, Freddy Garcia")
+
+
+def top_first_inning():
+    # first inning
+    time.sleep(4)
+    print()
+    print("Inning", 16 % 3)
+    # 16%3 is 1. This represents what inning it is.
+    time.sleep(1.5)
+    print()
+    print("Top of the 1st")
+    time.sleep(1.5)
+    print()
+    print("Pitching, Brandon Backe")
+    print("Batting, Scott Podsednik")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Ball, count 1-0")
+    print("2nd pitch, Foul, count 1-1")
+    print("3rd pitch, Called Strike, count 1-2")
+    print("4th pitch, Ball, count 2-2")
+    print("5th pitch, Ball, count 3-2")
+    print("6th pitch, flyout to left field,", int(2 - 1), "out")
+    # 2-1=1, 1 represents the number of outs there are
+    time.sleep(4)
+    print()
+    print("Batting, Tadahito Iguchi")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Called Strike, count 0-1")
+    print("2nd pitch, Ball, count 1-1")
+    print("3rd pitch, Called Strike, count 1-2")
+    print("4th pitch, flyout to right field,", int(5 // 2), "outs")
+    # 5//2=2, 2 represents the number of outs there are
+    time.sleep(2.5)
+    print()
+    print("Batting, Jermaine Dye")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Ball, count 1-0")
+    print("2nd pitch, Ball, count 2-0")
+    print("3rd pitch, Called strike, count 2-1")
+    print("4th pitch, Ball, count 3-1")
+    print("5th pitch, Line drive double to center field, still",
+          int(50 / 25), "outs")
+    # 50/25=2, 2 represents the number of outs there are
+    time.sleep(2.5)
+    print()
+    print("Batting, Paul Konerko")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Ball, count 1-0")
+    print("2nd pitch, Called strike, count 1-1")
+    print("3rd pitch, Ball, count 2-1")
+    print("4th pitch, Ball, count 3-1")
+    print("5th pitch, Foul, count 3-2")
+    print("6th pitch, Ground out to the pitch,", int(1.5 * 2), "outs")
+    # 1.5*2=3, 3 represents the number of outs there are
+    time.sleep(2.5)
+    print()
+    print("End of the top of the 1st")
+
+
+def bottom_first_inning():
+    time.sleep(1.5)
+    print()
+    print("Bottom of the 1st")
+    time.sleep(1.5)
+    print()
+    print("Pitching, Freddy Garcia")
+    print("Batting, Craig Biggio")
+    time.sleep(2.5)
+    print()
+    print("1st pitch, Foul, count 0-1")
+    print("2nd pitch, Ball, count 1-1")
+    print("3rd pitch, Ground ball single to left field, 0 outs")
+    time.sleep(1.5)
+    print()
+    print("Batting, Willy Taveras")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Ball, count 1-0")
+    print("2nd pitch, Sacrifice bunt to 3rd base, Biggio advances" +
+          "to 2nd base, 1 out")
+    time.sleep(1.5)
+    print()
+    print("Batting, Lance Berkman")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Ball, count 1-0")
+    print("2nd pitch, Foul, count 1-1")
+    print("3rd pitch, Swinging strike, count 1-2")
+    print("4th pitch, Strikeout swinging, 2 outs")
+    time.sleep(2.5)
+    print()
+    print("Batting, Morgan Ensberg")
+    time.sleep(1.5)
+    print()
+    print("1st pitch, Called strike, count 0-1")
+    print("2nd pitch, Ball, count 1-1")
+    print("3rd pitch, Ball, count 2-1")
+    print("4th pitch, Flyout to right field, 3 outs")
+    time.sleep(2.5)
+    print()
+    print("End of the bottom of the 1st")
+    time.sleep(1.5)
+    print()
+    print("End of the 1st Inning")
+
+
+def intermission():
+    # Answer = A
+    print("\nQuestion: What is the score of the game? ")
+    print("A: 0-0 No Score")
+    print("B: 1-0 Astros")
+    print("C: 1-0 White Sox")
+    print("D: 1-1 Tied")
+    print("Select one of the answer choices above: ")
+    user_input = input()
+    while not (user_input == "A") and not (user_input == "a"):
+        print("Wrong answer. Please try again.")
+        user_input = input()
+    print("Correct!")
+
+
+def test():
+    print("\nQuestion: What is the score of the game? ")
+    print("You only get three tries to get the answer right! ")
+    print("A: 0-0 No Score")
+    print("B: 1-0 Astros")
+    print("C: 1-0 White Sox")
+    print("D: 1-1 Tied")
+    print("Select one of the answer choices above: ")
+    user_input = input()
+    if (user_input == "A") or (user_input == "a"):
+        print("Correct!")
+    else:
+        for user_input in range(1, 3):
+            print("Wrong answer. Please try again.")
+            input()
+    print("If you got the question wrong then the answer was A")
+
+
+# This wouldn't work completely with trying to do the in range function
+
+# TWO PROBLEMS
+# 1) OUTPUT THE RIGHT ANSWER AFTER THREE TRIES IF THE USER DIDN'T
+# 1) GET THE RIGHT ANSWER
+# 2) ASK QUESTION: IF I PUT THE WRONG ANSWER IN FOR THE FIRST TRY IT PRINTS
+# 2) "Wrong answer. Please try again." BUT IF I ANSWER CORRECTLY FOR THE
+# 2) SECOND TRY IT STILL OUT PUTS THE WRONG ANSWER
+
+def second_inning():
+    print()
+    print("This is where the second inning would go")
+
+
+def main():
+    print("Hello, this is a game log of 1st inning of", end=" ")
+    # end statement
+    print()
+    time.sleep(1.5)
+    print("the 2005 MLB World Series, Game", int(2 + 2), )
+    # 2+2=4, 4 represents what game in the series it is
+    time.sleep(1.5)
+    print()
+    answer = int(input("If you want to continue press 1 then enter." +
+                       " If you want to end the simulation press 2 "
+                       "then enter: "))
+    if 1 <= answer < 2:
+        intro()
+        top_first_inning()
+        intermission()
+        bottom_first_inning()
+        test()
+        print()
+        answer = input("If you want to continue press 1" +
+                       " If you want to end the simulation press 2: ")
+        if answer == "1":
+            second_inning()
+        elif answer == "2":
+            print()
+            print("This is the end of the simulation. "
+                  "Thank you for your time. Goodbye.")
+        else:
+            print("Invalid Input!")
+    elif answer == 2:
+        print()
+        print("This is the end of the simulation. "
+              "Thank you for your time. Goodbye.")
+    else:
+        print()
+        print("Invalid Input!")
+
+
+main()
