@@ -76,7 +76,9 @@ def top_first_inning():
     print("3rd pitch, Called Strike, count 1-2")
     print("4th pitch, Ball, count 2-2")
     print("5th pitch, Ball, count 3-2")
+    #PASSING PERAMETAERS 
     print("6th pitch, flyout to left field,", int(2 - 1), "out")
+    # DEF TOP_FIRST_CONTINUE():
     # 2-1=1, 1 represents the number of outs there are
     time.sleep(4)
     print()
