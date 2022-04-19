@@ -1,11 +1,17 @@
-# Jacob Palmer
+"""This is for my COP 1500 Class, Final Integration Project"""
+# My name is Jacob Palmer
 # 2005 World Series Game 4, Chicago White Sox VS. Houston Astros
-# Website that helped me: https://www.baseball-reference.com/boxes/HOU/HOU200510260.shtml#all_1140652459
-# I have don't have a clue how to include parameter passing in this program
+# Website that helped me:
+# www.baseball-reference.com/boxes/HOU/HOU200510260.shtml#all_1140652459
+
 import time
+# I used this to let the user have the program run on its own, instead of
+# having to continuously press the enter key
+# One of the LA's from the other COP 1500 class gave me the idea of using this
 
 
 def intro():
+    """This is the first part of my project, the introduction """
     # This is the introduction to the simulation
     print()
     print("This game was on Wednesday, October 26, 2005 at 7:40 P.M.")
@@ -15,9 +21,10 @@ def intro():
     x -= 1
     y = 5
     y -= 1
-    attendance = int(x ** y + x ** y + 61 * 24)
-    print("The total attendance of the game was",
-          f"{attendance:,}", "people")
+    # I had to use all these numbers to make sure I got the right number
+    attendance = (int(x ** y + x ** y + 61 * 24))
+    print("The total attendance of the game was", format(attendance, ',d'),
+          "people")
     # 12**4 + 12**4 + 61*24 = 42936, 42936 represents the
     # number of people that went to the game
     time.sleep(1.5)
@@ -57,6 +64,7 @@ def intro():
 
 
 def top_first_inning():
+    """This is the beginning of the top of the first inning """
     # first inning
     time.sleep(4)
     print()
@@ -76,10 +84,26 @@ def top_first_inning():
     print("3rd pitch, Called Strike, count 1-2")
     print("4th pitch, Ball, count 2-2")
     print("5th pitch, Ball, count 3-2")
-    #PASSING PERAMETAERS 
-    print("6th pitch, flyout to left field,", int(2 - 1), "out")
-    # DEF TOP_FIRST_CONTINUE():
-    # 2-1=1, 1 represents the number of outs there are
+
+
+def subtraction(x, y):
+    """This function is for the parameter passing part of the project"""
+    answer = x - y
+    return answer
+
+
+first_num = 2
+second_num = 1
+
+num_outs = subtraction(first_num, second_num)
+
+
+# x - y or first_num - second_num, represents the number of outs there are
+# this is supposed to be the parameter passing function
+
+def top_first_inning_continued():
+    """This is the second part to the top of the first inning """
+    print("6th pitch, flyout to left field,", num_outs, "out")
     time.sleep(4)
     print()
     print("Batting, Tadahito Iguchi")
@@ -120,6 +144,7 @@ def top_first_inning():
 
 
 def bottom_first_inning():
+    """This is the bottom of the first inning """
     time.sleep(1.5)
     print()
     print("Bottom of the 1st")
@@ -139,7 +164,7 @@ def bottom_first_inning():
     print()
     print("1st pitch, Ball, count 1-0")
     print("2nd pitch, Sacrifice bunt to 3rd base, Biggio advances" +
-          "to 2nd base, 1 out")
+          " to 2nd base, 1 out")
     time.sleep(1.5)
     print()
     print("Batting, Lance Berkman")
@@ -167,6 +192,8 @@ def bottom_first_inning():
 
 
 def intermission():
+    """I had to implement this part of the project to use some more
+    functions """
     # Answer = A
     print("\nQuestion: What is the score of the game? ")
     print("A: 0-0 No Score")
@@ -209,11 +236,14 @@ def test():
 # 2) SECOND TRY IT STILL OUT PUTS THE WRONG ANSWER
 
 def second_inning():
+    """This is where the second inning would go, but I did not need to do
+    it because I already had most of the requirements already"""
     print()
     print("This is where the second inning would go")
 
 
 def main():
+    """This is the function that runs the whole program"""
     print("Hello, this is a game log of 1st inning of", end=" ")
     # end statement
     print()
@@ -228,13 +258,14 @@ def main():
     if 1 <= answer < 2:
         intro()
         top_first_inning()
+        top_first_inning_continued()
         intermission()
         bottom_first_inning()
         test()
         print()
         answer = input("If you want to continue press 1" +
                        " If you want to end the simulation press 2: ")
-        if answer == "1":
+        if not answer != "1":
             second_inning()
         elif answer == "2":
             print()
