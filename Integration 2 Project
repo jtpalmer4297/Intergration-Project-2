@@ -1,10 +1,15 @@
 """This is for my COP 1500 Class, Final Integration Project"""
+
+__author__ = "Jacob Palmer"
+
 # My name is Jacob Palmer
 # 2005 World Series Game 4, Chicago White Sox VS. Houston Astros
 # Website that helped me:
 # www.baseball-reference.com/boxes/HOU/HOU200510260.shtml#all_1140652459
 
 import time
+
+
 # I used this to let the user have the program run on its own, instead of
 # having to continuously press the enter key
 # One of the LA's from the other COP 1500 class gave me the idea of using this
@@ -12,6 +17,7 @@ import time
 
 def intro():
     """This is the first part of my project, the introduction """
+
     # This is the introduction to the simulation
     print()
     print("This game was on Wednesday, October 26, 2005 at 7:40 P.M.")
@@ -28,6 +34,8 @@ def intro():
     # 12**4 + 12**4 + 61*24 = 42936, 42936 represents the
     # number of people that went to the game
     time.sleep(1.5)
+    # I have introduced the both teams playing in the game in the introduction
+    # portion of this code which is in this part of the code
     print()
     print("The home team is the Houston Astros")
     print("The away team is the Chicago White Sox")
@@ -65,6 +73,7 @@ def intro():
 
 def top_first_inning():
     """This is the beginning of the top of the first inning """
+
     # first inning
     time.sleep(4)
     print()
@@ -88,6 +97,7 @@ def top_first_inning():
 
 def subtraction(x, y):
     """This function is for the parameter passing part of the project"""
+
     answer = x - y
     return answer
 
@@ -100,9 +110,12 @@ num_outs = subtraction(first_num, second_num)
 
 # x - y or first_num - second_num, represents the number of outs there are
 # this is supposed to be the parameter passing function
+# I had the separate the top innings into two parts to be able to insert the
+# passing parameters into the code
 
 def top_first_inning_continued():
     """This is the second part to the top of the first inning """
+
     print("6th pitch, flyout to left field,", num_outs, "out")
     time.sleep(4)
     print()
@@ -145,6 +158,7 @@ def top_first_inning_continued():
 
 def bottom_first_inning():
     """This is the bottom of the first inning """
+
     time.sleep(1.5)
     print()
     print("Bottom of the 1st")
@@ -194,13 +208,14 @@ def bottom_first_inning():
 def intermission():
     """I had to implement this part of the project to use some more
     functions """
+
     # Answer = A
     print("\nQuestion: What is the score of the game? ")
     print("A: 0-0 No Score")
     print("B: 1-0 Astros")
     print("C: 1-0 White Sox")
     print("D: 1-1 Tied")
-    print("Select one of the answer choices above: ")
+    print("Enter one of the letter choices A, B, C, or D: ")
     user_input = input()
     while not (user_input == "A") and not (user_input == "a"):
         print("Wrong answer. Please try again.")
@@ -215,7 +230,7 @@ def test():
     print("B: 1-0 Astros")
     print("C: 1-0 White Sox")
     print("D: 1-1 Tied")
-    print("Select one of the answer choices above: ")
+    print("Enter one of the letter choices A, B, C, or D: ")
     user_input = input()
     if (user_input == "A") or (user_input == "a"):
         print("Correct!")
@@ -226,24 +241,17 @@ def test():
     print("If you got the question wrong then the answer was A")
 
 
-# This wouldn't work completely with trying to do the in range function
-
-# TWO PROBLEMS
-# 1) OUTPUT THE RIGHT ANSWER AFTER THREE TRIES IF THE USER DIDN'T
-# 1) GET THE RIGHT ANSWER
-# 2) ASK QUESTION: IF I PUT THE WRONG ANSWER IN FOR THE FIRST TRY IT PRINTS
-# 2) "Wrong answer. Please try again." BUT IF I ANSWER CORRECTLY FOR THE
-# 2) SECOND TRY IT STILL OUT PUTS THE WRONG ANSWER
-
 def second_inning():
     """This is where the second inning would go, but I did not need to do
     it because I already had most of the requirements already"""
+
     print()
     print("This is where the second inning would go")
 
 
 def main():
     """This is the function that runs the whole program"""
+
     print("Hello, this is a game log of 1st inning of", end=" ")
     # end statement
     print()
@@ -252,9 +260,9 @@ def main():
     # 2+2=4, 4 represents what game in the series it is
     time.sleep(1.5)
     print()
-    answer = int(input("If you want to continue press 1 then enter." +
-                       " If you want to end the simulation press 2 "
-                       "then enter: "))
+    answer = int(input("If you want to continue with the simulation press 1 "
+                       "then enter." + " If you want to end the simulation "
+                                       "press 2 then enter: "))
     if 1 <= answer < 2:
         intro()
         top_first_inning()
@@ -263,10 +271,14 @@ def main():
         bottom_first_inning()
         test()
         print()
-        answer = input("If you want to continue press 1" +
-                       " If you want to end the simulation press 2: ")
+        answer = input("If you want to continue with the simulation "
+                       "press 1 then enter" +
+                       " If you want to end the simulation "
+                       "press 2 then enter: ")
         if not answer != "1":
             second_inning()
+            # This if statement allows the program to ask the user if they
+            # would like to continue through the program
         elif answer == "2":
             print()
             print("This is the end of the simulation. "
@@ -282,4 +294,5 @@ def main():
         print("Invalid Input!")
 
 
-main()
+if __name__ == "__main":
+    main()
